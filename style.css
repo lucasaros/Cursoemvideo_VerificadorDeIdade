@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: lightgray;
+    height: 100vh;
+}
+
+main {
+    margin: 40px;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.formulario {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.botao-enviar {
+    width: 5rem;
+}
+
+.resultado {
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagem {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 50%;
+}

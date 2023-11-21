@@ -1,0 +1,1 @@
+let sexo = document.getElementsByName('sexo')
