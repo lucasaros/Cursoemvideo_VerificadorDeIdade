@@ -6,39 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de Idade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1 class="titulo">Verificador de Idade</h1>
-    </header>
-    <main>
-        <form class="formulario">
 
-            <label for="ano">Ano de Nascimento:
-                <input type="number" name="ano" id="ano">
-            </label>
+    <h1 class="titulo">Verificador de Idade</h1>
 
-            <p>Sexo:
+    <form class="form">
+            <div class="form__ano-box">
+                    <input type="tel" name="ano" maxlength="400" placeholder="Ano de Nascimento">
+            </div>
+            <div class="form__genero-box">
                 <label for="masc">Masculino
                     <input type="radio" name="sexo" id="masc" value="M" checked>
                 </label>
-
                 <label for="fem">Feminino
                     <input type="radio" name="sexo" id="fem" value="F">
                 </label>
-            </p>
-
-            <input type="button" value="Verificar"
-            class="botao-enviar" onclick="verificar()">
-
-            <div class="resultado">
-                Preencha os dados acima para ver o resultado!
             </div>
 
-            <img src="" alt="" class="imagem">
+            <input class="form_botao-verificar" type="button" value="Verificar" onclick="verificar()">
+    </form>
 
-        </form>
-    </main>
+    <p class="resultado">Preencha os itens acima para ver o resultado</p>
+            
+    <img class="imagem"src="" alt="">
 
     <script src="script.js"></script>
 </body>

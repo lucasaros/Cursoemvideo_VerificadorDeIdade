@@ -1,57 +1,53 @@
 function verificar() {
-    let data = new Date() //armazena a data e a hora atuais
-    let anoAtual = data.getFullYear() 
-    //obtém o ano atual da data armazenada na variável "data"
-
-    let anoUsuario = document.getElementById('ano').value 
-    // value: para obter o valor do elemento inserido
-    let resultado = document.querySelectorAll('.resultado')
+    let data = new Date(); //data e a hora atuais
+    let anoAtual = data.getFullYear(); //ano atual
+    let anoNascimento = document.getElementsByName('ano')[0].value;
+    let sexo = document.getElementsByName('sexo');
+    let idade =  anoAtual - anoNascimento;
     
-    let imagem = document.getElementsByClassName('imagem')[0]
-
-    if (anoUsuario == 0 || anoUsuario > anoAtual){
+    if (anoNascimento == 0 || anoNascimento > anoAtual) {
         alert('Verifique os dados e tente novamente')
-        //verificando se os dados são válidos antes de continuar a execução    
+
     } else {
-        let sexo = document.getElementsByName('sexo')
-        //obtém os dois itens com o name:"sexo" 
-        let idade =  anoAtual - anoUsuario
-        let genero = ''
-
-        if (sexo[0].checked) { 
-            let genero = 'Homem'
-            resultado[0].innerText = `Detectamos ${genero} de ${idade} anos`
-         //verificando qual índice com name:"sexo" está marcado   
-
+        if (sexo[0].checked) {
+            let textoM = `Detectamos Homem de ${idade} anos`;
+            
             if (idade <= 7) {
-                imagem.src = 'imagens/crianca-M.png'
+                resultado(textoM, 'imagens/crianca-M.png');
             } else if (idade <= 17) {
-                imagem.src = 'imagens/adolescente-M.png'
+                resultado(textoM, 'imagens/adolescente-M.png');
             } else if (idade < 30) {
-                imagem.src = 'imagens/jovem-M.png'
+                resultado(textoM, 'imagens/jovem-M.jpg');
             } else if (idade <= 49) {
-                imagem.src = 'imagens/adulto-M.png'
+                resultado(textoM, 'imagens/adulto-M.png');
             } else {
-                imagem.src = 'imagens/senhor-M.png'
+                resultado(textoM, 'imagens/senhor-M.png');
             }
 
         } else {
-            let genero = 'Mulher'
-            resultado[0].innerText = `Detectamos ${genero} de ${idade} anos`
+            let textoF = `Detectamos mulher de ${idade} anos`;
 
             if (idade <= 7) {
-                imagem.src = 'imagens/crianca-F.jpg'
+                resultado(textoF, 'imagens/crianca-F.png')
             } else if (idade <= 17){
-                imagem.src = 'imagens/adolescente-F.jpg'
+                resultado(textoF, 'imagens/adolescente-F.png')
             } else if (idade < 30){
-                imagem.src = 'imagens/jovem-F.jpg'
+                resultado(textoF, 'imagens/jovem-F.png')
             } else if (idade <= 49){
-                imagem.src = 'imagens/adulta-F.jpg'
+                resultado(textoF, 'imagens/adulta-F.png')
             }else {
-                imagem.src = 'imagens/senhora-F.png'
+                resultado(textoF, 'imagens/senhora-F.png')
             }
         }
     }
 }
 
-//imagem.src = 'imagens/adolescente-F.jpg'
+
+function resultado(texto, imagem) {
+    let textoResultado = document.querySelector('.resultado');
+    textoResultado.innerText = texto;
+
+    let imagemResultado = document.querySelector('.imagem');
+    imagemResultado.src = imagem;
+}
+
