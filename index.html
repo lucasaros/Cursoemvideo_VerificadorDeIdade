@@ -10,28 +10,38 @@
 </head>
 <body>
 
-    <h1 class="titulo">Verificador de Idade</h1>
+    <header class="header">
+        <h1>Verificador de Idade</h1>
+    </header>
 
-    <form class="form">
-            <div class="form__ano-box">
-                    <input type="tel" name="ano" maxlength="400" placeholder="Ano de Nascimento">
-            </div>
-            <div class="form__genero-box">
-                <label for="masc">Masculino
-                    <input type="radio" name="sexo" id="masc" value="M" checked>
-                </label>
-                <label for="fem">Feminino
-                    <input type="radio" name="sexo" id="fem" value="F">
-                </label>
+    <main class="main-container">
+        
+        <form class="form" autocomplete="on">
+            <div class="form__year-box">
+                <input type="tel" id="year" maxlength="4" name="year" required>
+                <label for="year">Ano de nascimento</label>
             </div>
 
-            <input class="form_botao-verificar" type="button" value="Verificar" onclick="verificar()">
-    </form>
+            <div class="form__gender-box">
+                <label for="male">Masculino
+                    <input type="radio" name="gender" id="male" value="M" checked>
+                </label>
 
-    <p class="resultado">Preencha os itens acima para ver o resultado</p>
-            
-    <img class="imagem"src="" alt="">
+                <label for="female">Feminino
+                    <input type="radio" name="gender" id="female" value="F">
+                </label>
+            </div>
 
+            <button class="form__button" type="button">
+                <span>Verificar</span>
+            </button>
+        </form>
+
+        <section class="result">
+            <p class="result__text">Por favor, preencha o ano de nascimento e selecione o gênero para ver o resultado.</p>
+            <img class="result__image" src="" alt="">
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
