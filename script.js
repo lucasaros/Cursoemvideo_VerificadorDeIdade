@@ -23,17 +23,17 @@ function verificar() {
 
         if (sexo[0].checked) {
             if (idade <= 3) {
-                resultado(textoBebe, 'imagens/bebe-m.png');
+                resultado(textoBebe, 'imagens/bebe-masc.png');
             } else if (idade <= 12) {
-                resultado(textoCrianca, 'imagens/crianca-m.png');
+                resultado(textoCrianca, 'imagens/crianca-masc.png');
             } else if (idade <= 17) {
-                resultado(textoAdolescente, 'imagens/adolescente-m.png');
+                resultado(textoAdolescente, 'imagens/adolescente-masc.png');
             } else if (idade <= 29) {
-                resultado(textoJovem, 'imagens/jovem-m.jpg');
+                resultado(textoJovem, 'imagens/jovem-masc.jpg');
             } else if (idade <= 60) {
-                resultado(textoHomem, 'imagens/homem-m.png');    
+                resultado(textoHomem, 'imagens/homem.png');    
             } else {
-                resultado(textoSenhor, 'imagens/senhor-m.png');
+                resultado(textoSenhor, 'imagens/senhor.png');
             }
 
         } else {
@@ -41,17 +41,17 @@ function verificar() {
             let textoSenhora = `Detectamos Senhora de ${idade} anos`;
 
             if (idade <= 3) {
-                resultado(textoBebe, 'imagens/bebe-f.png')
+                resultado(textoBebe, 'imagens/bebe-fem.png')
             } else if (idade <= 12) {
-                resultado(textoCrianca, 'imagens/crianca-f.jpg')
+                resultado(textoCrianca, 'imagens/crianca-fem.jpg')
             } else if (idade <= 17) {
-                resultado(textoAdolescente, 'imagens/adolescente-f.png')
+                resultado(textoAdolescente, 'imagens/adolescente-fem.png')
             } else if (idade <= 29) {
-                resultado(textoJovem, 'imagens/jovem-f.png')
+                resultado(textoJovem, 'imagens/jovem-fem.png')
             } else if (idade <= 60) {
-                resultado(textoMulher, 'imagens/mulher-f.png')
+                resultado(textoMulher, 'imagens/mulher.png')
             } else {
-                resultado(textoSenhora, 'imagens/senhora-f.png')
+                resultado(textoSenhora, 'imagens/senhora.png')
             }
         }
     }
